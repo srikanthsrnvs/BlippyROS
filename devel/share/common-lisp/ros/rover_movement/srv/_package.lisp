@@ -1,0 +1,10 @@
+(cl:defpackage rover_movement-srv
+  (:use )
+  (:export
+   "MOTOR_COMMAND_SERVER"
+   "<MOTOR_COMMAND_SERVER-REQUEST>"
+   "MOTOR_COMMAND_SERVER-REQUEST"
+   "<MOTOR_COMMAND_SERVER-RESPONSE>"
+   "MOTOR_COMMAND_SERVER-RESPONSE"
+  ))
+

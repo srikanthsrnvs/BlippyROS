@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/parallels/rover_catkin_ws/install/setup.sh

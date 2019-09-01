@@ -1,0 +1,5 @@
+<launch>
+    <arg name="modbus_reader"/>
+    <node pkg="rover_movement" type="motor_data_hub.py" name="motor_data_hub" output="screen" args="$(arg modbus_reader)"/>
+    <node pkg="rover_movement" type="dashboard_transmitter.py" name="dashboard_transmitter" output="screen"/> 
+</launch>
