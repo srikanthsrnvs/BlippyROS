@@ -1,8 +1,8 @@
-# Install script for directory: /home/parallels/rover_catkin_ws/src/rover_movement
+# Install script for directory: /home/nvidia/BlippyROS/src/rover_movement
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/parallels/rover_catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/nvidia/BlippyROS/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,53 +38,53 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_movement/srv" TYPE FILE FILES "/home/parallels/rover_catkin_ws/src/rover_movement/srv/motor_command_server.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_movement/srv" TYPE FILE FILES "/home/nvidia/BlippyROS/src/rover_movement/srv/motor_command_server.srv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_movement/cmake" TYPE FILE FILES "/home/parallels/rover_catkin_ws/build/rover_movement/catkin_generated/installspace/rover_movement-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_movement/cmake" TYPE FILE FILES "/home/nvidia/BlippyROS/build/rover_movement/catkin_generated/installspace/rover_movement-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/parallels/rover_catkin_ws/devel/include/rover_movement")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/nvidia/BlippyROS/devel/include/rover_movement")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/parallels/rover_catkin_ws/devel/share/roseus/ros/rover_movement")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/nvidia/BlippyROS/devel/share/roseus/ros/rover_movement")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/parallels/rover_catkin_ws/devel/share/common-lisp/ros/rover_movement")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/nvidia/BlippyROS/devel/share/common-lisp/ros/rover_movement")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/parallels/rover_catkin_ws/devel/share/gennodejs/ros/rover_movement")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/nvidia/BlippyROS/devel/share/gennodejs/ros/rover_movement")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/parallels/rover_catkin_ws/devel/lib/python2.7/dist-packages/rover_movement")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/nvidia/BlippyROS/devel/lib/python2.7/dist-packages/rover_movement")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/parallels/rover_catkin_ws/devel/lib/python2.7/dist-packages/rover_movement")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/nvidia/BlippyROS/devel/lib/python2.7/dist-packages/rover_movement")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/parallels/rover_catkin_ws/build/rover_movement/catkin_generated/installspace/rover_movement.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nvidia/BlippyROS/build/rover_movement/catkin_generated/installspace/rover_movement.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_movement/cmake" TYPE FILE FILES "/home/parallels/rover_catkin_ws/build/rover_movement/catkin_generated/installspace/rover_movement-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_movement/cmake" TYPE FILE FILES "/home/nvidia/BlippyROS/build/rover_movement/catkin_generated/installspace/rover_movement-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_movement/cmake" TYPE FILE FILES
-    "/home/parallels/rover_catkin_ws/build/rover_movement/catkin_generated/installspace/rover_movementConfig.cmake"
-    "/home/parallels/rover_catkin_ws/build/rover_movement/catkin_generated/installspace/rover_movementConfig-version.cmake"
+    "/home/nvidia/BlippyROS/build/rover_movement/catkin_generated/installspace/rover_movementConfig.cmake"
+    "/home/nvidia/BlippyROS/build/rover_movement/catkin_generated/installspace/rover_movementConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_movement" TYPE FILE FILES "/home/parallels/rover_catkin_ws/src/rover_movement/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rover_movement" TYPE FILE FILES "/home/nvidia/BlippyROS/src/rover_movement/package.xml")
 endif()
 

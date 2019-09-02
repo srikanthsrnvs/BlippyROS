@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parallels/rover_catkin_ws/src
+CMAKE_SOURCE_DIR = /home/nvidia/BlippyROS/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parallels/rover_catkin_ws/build
+CMAKE_BINARY_DIR = /home/nvidia/BlippyROS/build
 
 # Utility rule file for run_tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
-	cd /home/parallels/rover_catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parallels/rover_catkin_ws/src /home/parallels/rover_catkin_ws/src /home/parallels/rover_catkin_ws/build /home/parallels/rover_catkin_ws/build /home/parallels/rover_catkin_ws/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nvidia/BlippyROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nvidia/BlippyROS/src /home/nvidia/BlippyROS/src /home/nvidia/BlippyROS/build /home/nvidia/BlippyROS/build /home/nvidia/BlippyROS/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/run_tests.dir/depend
 

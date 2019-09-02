@@ -1,2 +1,2 @@
-ddynamic_reconfigure:realsense-ros/realsense2_camera:realsense-ros/realsense2_description:rover_movement
--DCATKIN_DEVEL_PREFIX=/home/parallels/rover_catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/parallels/rover_catkin_ws/install -G Unix Makefiles
+rover_movement
+-DCATKIN_DEVEL_PREFIX=/home/nvidia/BlippyROS/devel -DCMAKE_INSTALL_PREFIX=/home/nvidia/BlippyROS/install -G Unix Makefiles

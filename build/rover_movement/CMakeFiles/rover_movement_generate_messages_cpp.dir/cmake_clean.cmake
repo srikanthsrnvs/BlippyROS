@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rover_movement_generate_messages_cpp"
-  "/home/parallels/rover_catkin_ws/devel/include/rover_movement/motor_command_server.h"
+  "/home/nvidia/BlippyROS/devel/include/rover_movement/motor_command_server.h"
 )
 
 # Per-language clean rules from dependency scanning.

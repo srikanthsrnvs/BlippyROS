@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/rover_movement_generate_messages_lisp"
-  "/home/parallels/rover_catkin_ws/devel/share/common-lisp/ros/rover_movement/srv/motor_command_server.lisp"
+  "/home/nvidia/BlippyROS/devel/share/common-lisp/ros/rover_movement/srv/motor_command_server.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

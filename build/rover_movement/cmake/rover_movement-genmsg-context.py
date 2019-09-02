@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/parallels/rover_catkin_ws/src/rover_movement/srv/motor_command_server.srv"
+services_str = "/home/nvidia/BlippyROS/src/rover_movement/srv/motor_command_server.srv"
 pkg_name = "rover_movement"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"
