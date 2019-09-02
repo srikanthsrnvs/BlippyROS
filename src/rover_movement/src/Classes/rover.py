@@ -1,4 +1,4 @@
-from servo import Servo
+from dynamixel_servo import DynamixelServo
 from traction import Traction
 
 
@@ -10,7 +10,7 @@ class Rover:
         self.forward_steering = forward_steering
         self.hind_steering = hind_steering
         self.initialized = False
-        assert isinstance(self.forward_steering[0], Servo) and isinstance(self.forward_steering[1], Servo) and isinstance(self.forward_motors[0], Traction) and isinstance(self.forward_motors[1], Traction) and isinstance(self.hind_steering[0], Servo) and isinstance(self.hind_motors[0], Traction) and isinstance(self.hind_motors[1], Traction)
+        assert isinstance(self.forward_steering[0], DynamixelServo) and isinstance(self.forward_steering[1], DynamixelServo) and isinstance(self.forward_motors[0], Traction) and isinstance(self.forward_motors[1], Traction) and isinstance(self.hind_steering[0], DynamixelServo) and isinstance(self.hind_steering[1], DynamixelServo) and isinstance(self.hind_motors[0], Traction) and isinstance(self.hind_motors[1], Traction)
 
     def initialize(self):
         for motor in self.forward_motors:
@@ -19,8 +19,10 @@ class Rover:
             motor.initialize()
         for motor in self.forward_steering:
             motor.initialize()
+            motor.steer(0)
         for motor in self.hind_steering:
             motor.initialize()
+            motor.steer(0)
         self.initialized = True
 
     def go(self, speed):

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
-sys.path.append('/home/parallels/rover_catkin_ws/src/rover_movement/src/Classes')
-sys.path.append('/home/parallels/rover_catkin_ws/src/rover_movement/src/srv')
+sys.path.append('/home/nvidia/BlippyROS/src/rover_movement/src/Classes')
+sys.path.append('/home/nvidia/BlippyROS/src/rover_movement/srv')
 
 from diffrential_rover import DiffrentialRover
 from traction import Traction
