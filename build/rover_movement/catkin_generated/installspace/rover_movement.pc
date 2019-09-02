@@ -1,8 +1,0 @@
-prefix=/home/nvidia/BlippyROS/install
-
-Name: rover_movement
-Description: Description of rover_movement
-Version: 0.0.0
-Cflags: -I/home/nvidia/BlippyROS/install/include
-Libs: -L/home/nvidia/BlippyROS/install/lib 
-Requires: 

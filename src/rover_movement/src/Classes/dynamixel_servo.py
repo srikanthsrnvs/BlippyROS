@@ -15,7 +15,7 @@ class DynamixelServo(DynamixelMotor):
         self.initialized = True
 
     def steer(self, angle):
-        position = angle/360 * 4095
+        position = (angle/360 * 4095) + + self.calibration_factor
         self.set_position(int(position))
 
     def get_status_values(self):

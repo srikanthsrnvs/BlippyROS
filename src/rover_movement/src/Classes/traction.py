@@ -4,7 +4,7 @@ from conversions import Converter
 from constants import *
 from motor import Motor
 
-Converter = Converter("traction", 16, wheel_size=0.1)
+Converter = Converter("traction", 1, wheel_size=0.03)
 
 
 class Traction(Motor):

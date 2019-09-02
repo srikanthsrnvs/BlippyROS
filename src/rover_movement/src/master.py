@@ -46,13 +46,19 @@ def begin_listening_for_inputs():
             if event.type == pygame.JOYAXISMOTION:
                 if event.axis == 0:  # this is the left stick
                     raw_dir = event.value
-                    if -1 < raw_dir < 1:
-                        if -1 < raw_dir < -0.1:
-                            command = {"command": "steer_left", "type": "movement", "value": rpm}
-                        elif 0.1 < raw_dir < 1:
-                            command = {"command": "steer_right", "type": "movement", "value": rpm}
-                        else:
-                            command = {"command": "go", "type": "movement", "value": rpm}
+                    angle = raw_dir/1 * 90
+                    command = {
+                        "command": "steer",
+                        "type": "movement",
+                        "value": int(angle)
+                    }
+                    # if -1 < raw_dir < 1:
+                    #     if -1 < raw_dir < -0.1:
+                    #         command = {"command": "steer_left", "type": "movement", "value": rpm}
+                    #     elif 0.1 < raw_dir < 1:
+                    #         command = {"command": "steer_right", "type": "movement", "value": rpm}
+                    #     else:
+                    #         command = {"command": "go", "type": "movement", "value": rpm}
         if not command == {}:
             try:
                 srv = rospy.ServiceProxy('motor_command_server', motor_command_server)

@@ -4,6 +4,7 @@ sys.path.append('/home/nvidia/BlippyROS/src/rover_movement/src/Classes')
 sys.path.append('/home/nvidia/BlippyROS/src/rover_movement/srv')
 
 from diffrential_rover import DiffrentialRover
+from rover import Rover
 from traction import Traction
 from pymodbus.client.sync import ModbusSerialClient
 from rover_movement.srv import motor_command_server, motor_command_serverResponse
@@ -16,7 +17,7 @@ command_queue = []
 motor_status = []
 
 
-def initialize_rover(modbus_port):
+def initialize_rover(modbus_port, servo_port):
     global rover
     modbus_client = ModbusSerialClient(method='rtu', port=modbus_port, baudrate=57600, parity="E", timeout=1)
     modbus_client.connect()
@@ -26,7 +27,12 @@ def initialize_rover(modbus_port):
     forward3 = Traction("topRight", 3, modbus_client, "right")
     forward4 = Traction("bottomLeft", 4, modbus_client, "left")
 
-    rover = DiffrentialRover([forward2, forward3], [forward4, forward1])
+    topLeftSteering       =    DynamixelServo(servo_port, 4)
+    topRightSteering      =    DynamixelServo(servo_port, 2)
+    bottomLeftSteering    =    DynamixelServo(servo_port, 3)
+    bottomRightSteering   =    DynamixelServo(servo_port, 1)
+
+    rover = Rover([forward1, forward2], [forward3, forward4], [topLeftSteering, topRightSteering], [bottomLeftSteering, bottomRightSteering])
     rover.initialize()
 
 def add_command_to_queue(req):
@@ -68,16 +74,18 @@ def execute_command(raw_command):
     value = raw_command[1]
 
     if command == "steer_left":
-        rover.steer_left(value)
+        # rover.steer_left(value)
         rospy.loginfo("Attempted to steer left..")
     elif command == "steer_right":
-        rover.steer_right(value)
+        # rover.steer_right(value)
         rospy.loginfo("Attempted to steer right..")
+    elif command == "steer":
+        rover.steer(value)
     elif command == "go":
         rover.go(value, 10)
         rospy.loginfo("Attempted to go forwards..")
     elif command == "speed":
-        rover.change_speed(value, 10)
+        rover.set_speed(value, 10)
         rospy.loginfo("Attempted to change speed..")
     elif command == "get_status":
         motor_status = rover.get_motor_status
@@ -95,10 +103,10 @@ def start_listening_for_commands():
     run_command_queue()
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print("No modbus port arguement specified")
+    if len(sys.argv) < 3:
+        print("Usage: python rover_command_queue.py MODBUS_PORT DYNAMIXEL_PORT")
     else:
-        initialize_rover(sys.argv[1])
+        initialize_rover(sys.argv[1], sys.argv[2])
         start_listening_for_commands()
 
     
